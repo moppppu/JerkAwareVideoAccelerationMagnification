@@ -30,11 +30,12 @@ addpath(fullfile(pwd, 'matlabPyrTools'));
 addpath(fullfile(pwd, 'matlabPyrTools', 'MEX'));
 
 % Set dir
-dataDir = 'C:\Users\Shoichiro Takeda\Videos'; % Change your dir
+% dataDir = 'C:\Users\Shoichiro Takeda\Videos'; % Change your dir
+dataDir = '/Users/shoichirotakeda/Movies';
 outputDir = [pwd, '\outputs'];
 
 % Select input video
-inFile = fullfile(dataDir,['ukulele.mp4']); % Change your data name
+inFile = fullfile(dataDir,['baby.mp4']); % Change your data name
 [Path,FileName,Ext] = fileparts(inFile);
 
 % Read video
@@ -158,7 +159,8 @@ for level = 2:1:nPyrLevel-1 % except for the highest/lowest pyramid level
         wIDX = filtIDX{level,ori}{2};
         cfilter = CSF{level,ori};       
 
-        for f = 1:nF              
+        for f = 1:nF
+            % here, we apply rondomized sparcification algorhithm
             CSF_fft_Y = cfilter .* fft_Y(hIDX, wIDX, f);  
             R = ifft2(ifftshift(CSF_fft_Y)); 
 
