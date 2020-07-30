@@ -23,9 +23,10 @@ clear all;
 
 % Add path
 addpath(fullfile(pwd, 'outputs'));
-addpath(fullfile(pwd, 'pyrToolsExt'));
+addpath(fullfile(pwd, 'myPyrToolsExt'));
 addpath(fullfile(pwd, 'myfunctions'));
 addpath(fullfile(pwd, 'Filters'));
+addpath(fullfile(pwd, 'utilize'));
 
 % Set dir
 % dataDir = 'C:\Users\Shoichiro Takeda\Videos'; % Change your dir
@@ -68,7 +69,7 @@ resultName = ['mag-',FileName, ...
         
 %% Preprocess for input video
 % Resize (H x W) scale
-TmpVid = resizeVideo(vid, ScaleVideoSize);
+TmpVid = imresizeVideo(vid, ScaleVideoSize);
 clear vid;
 vid = TmpVid;
 clear TmpVid;
@@ -96,7 +97,7 @@ fft_Y = single(fftshift(fftshift(fft2(squeeze(originalFrame(:,:,1,:))),1),2));
 ht = maxSCFpyrHt(zeros(nH,nW));
 
 % Get CSF and indices
-[CSF, filtIDX] = getFiltersTakeda([nH nW], 2.^[0:-0.5:-ht], nOri, 'twidth', 0.75);
+[CSF, filtIDX] = getCSFandIDX([nH nW], 2.^[0:-0.5:-ht], nOri, 'twidth', 0.75);
 
 % Get pyramid patameter
 nPyrLevel = size(CSF,1);

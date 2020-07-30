@@ -1,4 +1,4 @@
-% FILTERS = getFilters(DIMENSION, RVALS, ORIENTATIONS, ...)
+% FILTERS = getCSF(DIMENSION, RVALS, ORIENTATIONS, ...)
 %
 % Returns the transfer function of the different scales and orientations of
 % a complex steerable pyramid.
@@ -19,9 +19,8 @@
 %
 % *Modified by Shoichiro Takeda @ 2020/01/16
 %  - outputs cropped filters & indices with the pyramid structure
-%
 
-function [filters, IDX] = getFiltersTakeda(dimension, rVals, orientations, varargin )
+function [filters, IDX] = getCSFandIDX(dimension, rVals, orientations, varargin )
 
 p = inputParser;
 
