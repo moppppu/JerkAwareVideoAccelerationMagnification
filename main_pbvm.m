@@ -11,8 +11,8 @@
 %
 % This implementation also includes some lightly-modified third party codes:
 %   - matlabPyrTools, from "https://github.com/LabForComputationalVision/matlabPyrTools"
-%   - pyToolsExt&Filters, from "http://people.csail.mit.edu/nwadhwa/phase-video/PhaseBasedRelease_20131023.zip"
-%   - main&funtions,  from "https://github.com/acceleration-magnification/sources (*initial version)"
+%   - myPyToolsExt&Filters from "http://people.csail.mit.edu/nwadhwa/phase-video/PhaseBasedRelease_20131023.zip"
+%   - main & myfuntions,  from "https://github.com/acceleration-magnification/sources (*initial version)"
 % All credit for the third party codes is with the authors.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,9 +24,9 @@ clear all;
 % Add path
 addpath(fullfile(pwd, 'outputs'));
 addpath(fullfile(pwd, 'myPyrToolsExt'));
-addpath(fullfile(pwd, 'myfunctions'));
+addpath(fullfile(pwd, 'myfunctions/Filters'));
+addpath(fullfile(pwd, 'myfunctions/utilize'));
 addpath(fullfile(pwd, 'Filters'));
-addpath(fullfile(pwd, 'utilize'));
 
 % Set dir
 % dataDir = 'C:\Users\Shoichiro Takeda\Videos'; % Change your dir
