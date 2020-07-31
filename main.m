@@ -2,7 +2,7 @@
 %
 % Author: Shoichiro Takeda
 % Date (last update): 2020/07/31
-% License: Please refer to the attached LICENCE file
+% License: Please refer to the attached LICENCE.docx file
 %
 % Please refer to the original paper: 
 %   "Jerk-Aware Video Acceleration Magnification", CVPR 2018

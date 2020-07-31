@@ -2,7 +2,7 @@
 %
 % Author: Shoichiro Takeda
 % Date (last update): 2020/07/31
-% License: Please refer to the attached LICENCE file
+% License: Please refer to the attached LICENCE.docx file
 %
 % Please refer to the original paper: 
 %   "Jerk-Aware Video Acceleration Magnification", CVPR 2018
@@ -151,7 +151,6 @@ for level = 2:1:nPyrLevel-1 % except for the highest/lowest pyramid level
         cfilter = CSF{level,ori};
         
         detP = filtered_phase{level,ori}; 
-%         detP = JAF{level,ori} .* filtered_phase{level,ori};
 
         for f = 1:nF
             CSF_fft_Y = cfilter .* fft_Y(hIDX, wIDX, f);  
