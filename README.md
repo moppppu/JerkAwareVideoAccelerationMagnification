@@ -14,5 +14,12 @@ Please cite as:
       year = {2018}
     }
     
- # License
- Please check **LICENSE.docx** carefully.
+# License
+**Please read carefully LICENSE.docx before you download and/or use this software**.
+
+Additionally, this software'code also includes some lightly-modified third party codes:
+
+- myPyToolsExt & Filters, from "http://people.csail.mit.edu/nwadhwa/phase-video/PhaseBasedRelease_20131023.zip"
+- main & myfuntions, from "https://github.com/acceleration-magnification/sources (*initial version)"
+
+All credit for the third party codes is with the authors.
