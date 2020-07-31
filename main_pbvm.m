@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Author: Shoichiro Takeda, Nippon Telegraph and Telephone Corporation
-% Date (last update): 2020/01/16
+% Author: Shoichiro Takeda
+% Date (last update): 2020/07/31
 % License: Please refer to the attached LICENCE file
 %
 % Please refer to the original paper: 
@@ -115,7 +115,6 @@ for level = 2:1:nPyrLevel-1 % except for the highest/lowest pyramid level
         cfilter = CSF{level,ori};       
 
         for f = 1:nF
-            % here, we apply rondomized sparcification algorhithm
             CSF_fft_Y = cfilter .* fft_Y(hIDX, wIDX, f);  
             R = ifft2(ifftshift(CSF_fft_Y)); 
 
@@ -206,56 +205,3 @@ fprintf('\n');
 fprintf('rename\n'); movefile([pwd,'/outputs/output.mp4'],[pwd, '/outputs/', resultName, '.mp4']);
 fprintf('delete prefile\n'); delete('./outputs/pre.avi');
 fprintf('Done\n');
-
-% %% Visualize phase diferences
-% % pyr = 2;
-% % oct = 5;
-% % phase_caxis = [-2,2];
-% 
-% pyr = 3;
-% oct = 5;
-% phase_caxis = [-1.5,1.5];
-% 
-% for i = 3
-%     
-%     clear F
-% 
-%     for t = 1:1:nF
-%         figure('position',[1256.20000000000,1392.20000000000,403.200000000000,233.600000000000]);
-%         set(gcf,'Visible', 'off');
-%         set(gcf,'color',[0 0 0])
-%         colormap jet;
-% 
-%         if i == 1
-% %             imagesc(vid(:,:,:,t));
-% %             axis off;
-% 
-%         elseif i==2
-% %             imagesc( squeeze( JAF{pyr,ori}(t,:,:)) );
-% %             caxis(map_caxis);
-% %             axis off;
-% 
-%         elseif i==3
-%             imagesc( squeeze( filtered_phase{pyr,oct}(t,:,:) ) );
-%             caxis(phase_caxis);  
-%             axis off;
-%         end
-% 
-%         F(t) = getframe(gcf);
-%     end
-% 
-%     fprintf('\n');
-%     fprintf('Output Video\n');
-%     outName = fullfile(outputDir,['visualize_',num2str(i),'.avi']);
-%     vidOut = VideoWriter(outName, 'Uncompressed AVI');
-%     vidOut.FrameRate = FrameRate;
-%     open(vidOut) 
-% 
-%     writeVideo(vidOut, F);
-% 
-%     disp('Finished')
-%     close(vidOut);
-% 
-%     close all
-% 
-% end
