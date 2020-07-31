@@ -4,6 +4,7 @@ This repository contains codes corresponding to:
 S.Takeda, K.Okami, D.Mikami, M.Isogai, H.Kimata. 
 **Jerk-Aware Video Acceleration Magnification**. 
 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.
+URL: https://openaccess.thecvf.com/content_cvpr_2018/papers/Takeda_Jerk-Aware_Video_Acceleration_CVPR_2018_paper.pdf
 
 Please cite as:
 
