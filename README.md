@@ -18,7 +18,7 @@ Please cite as:
 # License
 **Please read carefully LICENSE.docx before you download and/or use this software**.
 
-Additionally, this software'code also includes some lightly-modified third party codes:
+Additionally, this software's code also includes some lightly-modified third party codes:
 
 - myPyToolsExt & Filters, from "http://people.csail.mit.edu/nwadhwa/phase-video/PhaseBasedRelease_20131023.zip"
 - main & myfuntions, from "https://github.com/acceleration-magnification/sources (*initial version)"
